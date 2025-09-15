@@ -56,9 +56,9 @@ class TaskSelectUsers:
         c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
         return R * c
 
-    def calculate_distance(self, loc1: Tuple[float, float], loc2: Tuple[float, float]) -> Tuple[float, float]:
+    def calculate_distance(self, loc1: Tuple[float, float], loc2: Tuple[float, float]) -> Tuple[float, float, dict]:
         """
-        Return driving distance (km) and travel time (s) between two coords using OSRM.
+        Return driving distance (km), travel time (s) and full OSRM response between two coords using OSRM.
         """
         print(f"Calculating distance from {loc1} to {loc2} using OSRM at {self.osrm_url}")
         try:
@@ -68,15 +68,16 @@ class TaskSelectUsers:
             )
             resp = requests.get(url, timeout=self.osrm_timeout_s)
             resp.raise_for_status()
-            data = resp.json()['routes'][0]
+            full_response = resp.json()
+            data = full_response['routes'][0]
             print(f"OSRM response: {data}")
 
             distance_km = data['distance'] / 1000.0
             duration_s = data['duration']
-            return distance_km, duration_s
+            return distance_km, duration_s, full_response
         except Exception as e:
             print(f"Error in OSRM request: {e}")
-            return float('inf'), float('inf')
+            return float('inf'), float('inf'), {}
 
     def select_nearest_available_users(
         self,
@@ -87,8 +88,9 @@ class TaskSelectUsers:
         Select users by combined filters and sorting.
         """
         users = self.get_all_users()
-        candidates: List[Tuple[dict, float, float]] = []
+        candidates: List[Tuple[dict, float, float, dict]] = []
         osrm_results_map = {}
+        osrm_response_values = []
 
         for idx, user in enumerate(users):
             lat = user.get('latitude')
@@ -101,15 +103,23 @@ class TaskSelectUsers:
                 if self.haversine_distance(alert_location, loc) > self.euclidian_filter_km:
                     continue
             # Calculate route metrics
-            distance_km, duration_s = self.calculate_distance(alert_location, loc)
+            distance_km, duration_s, full_response = self.calculate_distance(alert_location, loc)
             # Store OSRM result for this user (by index or user id if available)
             user_key = user.get('id', idx)
             osrm_results_map[user_key] = {'distance_km': distance_km, 'duration_s': duration_s}
-            # Filter by diametern
+            
+            # Store full OSRM response for OSRM_RESPONSE_VALUES
+            if full_response:
+                osrm_response_values.append({
+                    "user_id": str(user_key),
+                    "osrm_response": full_response
+                })
+            
+            # Filter by diameter
             if self.selection_diameter_km is not None:
                 if distance_km > (self.selection_diameter_km / 2):
                     continue
-            candidates.append((user, distance_km, duration_s))
+            candidates.append((user, distance_km, duration_s, full_response))
 
         # Sort candidates
         if self.sort_by == 'travel_time':
@@ -118,17 +128,22 @@ class TaskSelectUsers:
             sorted_list = sorted(candidates, key=lambda x: x[1])
 
         selected: List[dict] = []
-        for user, dist, dur in sorted_list:
+        for user, dist, dur, full_resp in sorted_list:
             if self.filter_only_available and not user.get('available', True):
                 continue
             selected.append(user)
             if len(selected) >= num_users:
                 break
 
-        return selected, osrm_results_map
+        # Log the selection results
+        print(f"Selected {len(selected)} users out of {len(users)} total users")
+        if not selected:
+            print("Warning: No users selected based on current criteria")
+
+        return selected, osrm_results_map, osrm_response_values
 
 if __name__ == '__main__':
-    OSRM_URL ='http://89.227.207.199:5002'
+    OSRM_URL ='https://airbusrt.ddns.net'
     SELECTION_DIAMETER_KM = float(variables.get("selection_diameter_km"))
     USER_PROFILE_SELECTION = variables.get("user_profile_selection")
     FILTER_ONLY_AVAILABLE = bool(variables.get("filter_only_available"))
@@ -148,10 +163,12 @@ if __name__ == '__main__':
     )
 
     alert_location = (48.79842194845064, 1.9707823090763419)
-    selected_users, osrm_results_map = selector.select_nearest_available_users(
+    selected_users, osrm_results_map, osrm_response_values = selector.select_nearest_available_users(
         alert_location,
         num_users=NUM_USERS_SELECTION
     )
 
-    resultMap.put("SELECTED_USERS", selected_users)
-    resultMap.put("OSRM_RESULTS", osrm_results_map)
+    print(f"Selected {len(selected_users)} users: {selected_users}")
+    resultMap.put("SELECTED_USERS", json.dumps(selected_users))
+    resultMap.put("OSRM_RESULTS", json.dumps(osrm_results_map))
+    resultMap.put("OSRM_RESPONSE_VALUES", json.dumps(osrm_response_values))

@@ -43,11 +43,11 @@ experiment Exp1 {
     space S1 of FireDetectionWorkflow1 {
         //strategy gridsearch;
         strategy randomsearch;
-        runs = 1;
+        runs = 3;
 
         // SelectUsers
-        param_values num_users_selection_values = range(1,5);
-        param_values selection_diameter_km_values = range(1,20);
+        param_values num_users_selection_values = range(3,10);
+        param_values selection_diameter_km_values = range(20,40);
         param_values user_profile_selection_values = enum("driving","walking","cycling");
         param_values filter_only_available_values = enum("true","false");
         param_values sort_by_values = enum("distance","travel_time");
