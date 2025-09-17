@@ -1048,5 +1048,2105 @@
     "longitude": 2.2939,
     "available": true,
     "status": "cycling"
+  },
+  {
+    "id": 151,
+    "latitude": 48.9044,
+    "longitude": 2.3048,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 152,
+    "latitude": 48.7905,
+    "longitude": 2.2569,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 153,
+    "latitude": 48.8619,
+    "longitude": 2.3114,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 154,
+    "latitude": 48.9031,
+    "longitude": 2.2525,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 155,
+    "latitude": 48.8996,
+    "longitude": 2.2237,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 156,
+    "latitude": 48.9119,
+    "longitude": 2.2809,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 157,
+    "latitude": 48.8901,
+    "longitude": 2.2391,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 158,
+    "latitude": 48.872,
+    "longitude": 2.306,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 159,
+    "latitude": 48.8156,
+    "longitude": 2.2944,
+    "available": false,
+    "status": "driving"
+  },
+  {
+    "id": 160,
+    "latitude": 48.8615,
+    "longitude": 2.3796,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 161,
+    "latitude": 48.8914,
+    "longitude": 2.3114,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 162,
+    "latitude": 48.8361,
+    "longitude": 2.3827,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 163,
+    "latitude": 48.8434,
+    "longitude": 2.4577,
+    "available": false,
+    "status": "driving"
+  },
+  {
+    "id": 164,
+    "latitude": 48.9241,
+    "longitude": 2.1256,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 165,
+    "latitude": 48.9477,
+    "longitude": 2.3934,
+    "available": false,
+    "status": "driving"
+  },
+  {
+    "id": 166,
+    "latitude": 48.8741,
+    "longitude": 2.2881,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 167,
+    "latitude": 48.8159,
+    "longitude": 2.22,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 168,
+    "latitude": 48.921,
+    "longitude": 2.1771,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 169,
+    "latitude": 48.9302,
+    "longitude": 2.1278,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 170,
+    "latitude": 48.8441,
+    "longitude": 2.1847,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 171,
+    "latitude": 48.8688,
+    "longitude": 2.2598,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 172,
+    "latitude": 48.9201,
+    "longitude": 2.1482,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 173,
+    "latitude": 48.8451,
+    "longitude": 2.4522,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 174,
+    "latitude": 48.9225,
+    "longitude": 2.3811,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 175,
+    "latitude": 48.7998,
+    "longitude": 2.1615,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 176,
+    "latitude": 48.8436,
+    "longitude": 2.217,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 177,
+    "latitude": 48.8863,
+    "longitude": 2.3353,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 178,
+    "latitude": 48.819,
+    "longitude": 2.1693,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 179,
+    "latitude": 48.854,
+    "longitude": 2.1482,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 180,
+    "latitude": 48.9498,
+    "longitude": 2.4144,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 181,
+    "latitude": 48.7913,
+    "longitude": 2.3778,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 182,
+    "latitude": 48.8093,
+    "longitude": 2.1229,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 183,
+    "latitude": 48.8741,
+    "longitude": 2.1781,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 184,
+    "latitude": 48.8213,
+    "longitude": 2.3553,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 185,
+    "latitude": 48.8946,
+    "longitude": 2.4201,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 186,
+    "latitude": 48.8945,
+    "longitude": 2.3128,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 187,
+    "latitude": 48.9422,
+    "longitude": 2.2325,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 188,
+    "latitude": 48.8366,
+    "longitude": 2.3026,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 189,
+    "latitude": 48.9228,
+    "longitude": 2.4557,
+    "available": false,
+    "status": "driving"
+  },
+  {
+    "id": 190,
+    "latitude": 48.8982,
+    "longitude": 2.1272,
+    "available": false,
+    "status": "driving"
+  },
+  {
+    "id": 191,
+    "latitude": 48.8173,
+    "longitude": 2.3557,
+    "available": false,
+    "status": "driving"
+  },
+  {
+    "id": 192,
+    "latitude": 48.9485,
+    "longitude": 2.1849,
+    "available": false,
+    "status": "driving"
+  },
+  {
+    "id": 193,
+    "latitude": 48.8649,
+    "longitude": 2.3487,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 194,
+    "latitude": 48.8865,
+    "longitude": 2.3748,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 195,
+    "latitude": 48.7908,
+    "longitude": 2.4546,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 196,
+    "latitude": 48.8607,
+    "longitude": 2.4101,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 197,
+    "latitude": 48.7944,
+    "longitude": 2.238,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 198,
+    "latitude": 48.8654,
+    "longitude": 2.329,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 199,
+    "latitude": 48.9447,
+    "longitude": 2.174,
+    "available": false,
+    "status": "driving"
+  },
+  {
+    "id": 200,
+    "latitude": 48.8447,
+    "longitude": 2.2068,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 201,
+    "latitude": 48.8949,
+    "longitude": 2.4567,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 202,
+    "latitude": 48.8108,
+    "longitude": 2.1347,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 203,
+    "latitude": 48.8928,
+    "longitude": 2.2483,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 204,
+    "latitude": 48.7907,
+    "longitude": 2.261,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 205,
+    "latitude": 48.9317,
+    "longitude": 2.3655,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 206,
+    "latitude": 48.9337,
+    "longitude": 2.1715,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 207,
+    "latitude": 48.9005,
+    "longitude": 2.4427,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 208,
+    "latitude": 48.857,
+    "longitude": 2.4163,
+    "available": false,
+    "status": "driving"
+  },
+  {
+    "id": 209,
+    "latitude": 48.9142,
+    "longitude": 2.2123,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 210,
+    "latitude": 48.8897,
+    "longitude": 2.3806,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 211,
+    "latitude": 48.9051,
+    "longitude": 2.3487,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 212,
+    "latitude": 48.8707,
+    "longitude": 2.2028,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 213,
+    "latitude": 48.8926,
+    "longitude": 2.1849,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 214,
+    "latitude": 48.9035,
+    "longitude": 2.1901,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 215,
+    "latitude": 48.8093,
+    "longitude": 2.1414,
+    "available": false,
+    "status": "driving"
+  },
+  {
+    "id": 216,
+    "latitude": 48.8679,
+    "longitude": 2.3453,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 217,
+    "latitude": 48.8524,
+    "longitude": 2.4246,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 218,
+    "latitude": 48.8877,
+    "longitude": 2.1833,
+    "available": false,
+    "status": "driving"
+  },
+  {
+    "id": 219,
+    "latitude": 48.8088,
+    "longitude": 2.3192,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 220,
+    "latitude": 48.7981,
+    "longitude": 2.2727,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 221,
+    "latitude": 48.8618,
+    "longitude": 2.3849,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 222,
+    "latitude": 48.8895,
+    "longitude": 2.2275,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 223,
+    "latitude": 48.9463,
+    "longitude": 2.2667,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 224,
+    "latitude": 48.7948,
+    "longitude": 2.4096,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 225,
+    "latitude": 48.8975,
+    "longitude": 2.337,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 226,
+    "latitude": 48.9008,
+    "longitude": 2.1271,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 227,
+    "latitude": 48.9368,
+    "longitude": 2.1807,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 228,
+    "latitude": 48.8113,
+    "longitude": 2.1431,
+    "available": false,
+    "status": "driving"
+  },
+  {
+    "id": 229,
+    "latitude": 48.8072,
+    "longitude": 2.3026,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 230,
+    "latitude": 48.8607,
+    "longitude": 2.267,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 231,
+    "latitude": 48.8539,
+    "longitude": 2.324,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 232,
+    "latitude": 48.7952,
+    "longitude": 2.1574,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 233,
+    "latitude": 48.9002,
+    "longitude": 2.4573,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 234,
+    "latitude": 48.8881,
+    "longitude": 2.4095,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 235,
+    "latitude": 48.9021,
+    "longitude": 2.2303,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 236,
+    "latitude": 48.9427,
+    "longitude": 2.4051,
+    "available": false,
+    "status": "driving"
+  },
+  {
+    "id": 237,
+    "latitude": 48.8151,
+    "longitude": 2.4398,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 238,
+    "latitude": 48.7985,
+    "longitude": 2.3304,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 239,
+    "latitude": 48.8688,
+    "longitude": 2.3584,
+    "available": false,
+    "status": "driving"
+  },
+  {
+    "id": 240,
+    "latitude": 48.8077,
+    "longitude": 2.2676,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 241,
+    "latitude": 48.8789,
+    "longitude": 2.1598,
+    "available": false,
+    "status": "driving"
+  },
+  {
+    "id": 242,
+    "latitude": 48.9244,
+    "longitude": 2.2339,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 243,
+    "latitude": 48.9012,
+    "longitude": 2.2739,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 244,
+    "latitude": 48.8038,
+    "longitude": 2.296,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 245,
+    "latitude": 48.8565,
+    "longitude": 2.1587,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 246,
+    "latitude": 48.8069,
+    "longitude": 2.3532,
+    "available": false,
+    "status": "driving"
+  },
+  {
+    "id": 247,
+    "latitude": 48.8015,
+    "longitude": 2.2918,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 248,
+    "latitude": 48.9334,
+    "longitude": 2.126,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 249,
+    "latitude": 48.8396,
+    "longitude": 2.1416,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 250,
+    "latitude": 48.9474,
+    "longitude": 2.2777,
+    "available": true,
+    "status": "driving"
+  },
+  {
+    "id": 251,
+    "latitude": 48.9299,
+    "longitude": 2.3446,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 252,
+    "latitude": 48.7993,
+    "longitude": 2.2064,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 253,
+    "latitude": 48.9013,
+    "longitude": 2.2545,
+    "available": false,
+    "status": "walking"
+  },
+  {
+    "id": 254,
+    "latitude": 48.8148,
+    "longitude": 2.1977,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 255,
+    "latitude": 48.8054,
+    "longitude": 2.3038,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 256,
+    "latitude": 48.877,
+    "longitude": 2.3957,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 257,
+    "latitude": 48.8627,
+    "longitude": 2.2111,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 258,
+    "latitude": 48.8014,
+    "longitude": 2.3557,
+    "available": false,
+    "status": "walking"
+  },
+  {
+    "id": 259,
+    "latitude": 48.8434,
+    "longitude": 2.2846,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 260,
+    "latitude": 48.8462,
+    "longitude": 2.4039,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 261,
+    "latitude": 48.8357,
+    "longitude": 2.3279,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 262,
+    "latitude": 48.9231,
+    "longitude": 2.3297,
+    "available": false,
+    "status": "walking"
+  },
+  {
+    "id": 263,
+    "latitude": 48.8676,
+    "longitude": 2.4536,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 264,
+    "latitude": 48.8909,
+    "longitude": 2.1711,
+    "available": false,
+    "status": "walking"
+  },
+  {
+    "id": 265,
+    "latitude": 48.8376,
+    "longitude": 2.4375,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 266,
+    "latitude": 48.8574,
+    "longitude": 2.3079,
+    "available": false,
+    "status": "walking"
+  },
+  {
+    "id": 267,
+    "latitude": 48.9148,
+    "longitude": 2.2443,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 268,
+    "latitude": 48.792,
+    "longitude": 2.385,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 269,
+    "latitude": 48.9337,
+    "longitude": 2.2719,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 270,
+    "latitude": 48.846,
+    "longitude": 2.4069,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 271,
+    "latitude": 48.9382,
+    "longitude": 2.3061,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 272,
+    "latitude": 48.7958,
+    "longitude": 2.1689,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 273,
+    "latitude": 48.8354,
+    "longitude": 2.4449,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 274,
+    "latitude": 48.8806,
+    "longitude": 2.3734,
+    "available": false,
+    "status": "walking"
+  },
+  {
+    "id": 275,
+    "latitude": 48.8641,
+    "longitude": 2.3356,
+    "available": false,
+    "status": "walking"
+  },
+  {
+    "id": 276,
+    "latitude": 48.9171,
+    "longitude": 2.3534,
+    "available": false,
+    "status": "walking"
+  },
+  {
+    "id": 277,
+    "latitude": 48.8567,
+    "longitude": 2.3171,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 278,
+    "latitude": 48.8184,
+    "longitude": 2.372,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 279,
+    "latitude": 48.8833,
+    "longitude": 2.1965,
+    "available": false,
+    "status": "walking"
+  },
+  {
+    "id": 280,
+    "latitude": 48.7963,
+    "longitude": 2.4467,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 281,
+    "latitude": 48.8445,
+    "longitude": 2.2412,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 282,
+    "latitude": 48.8746,
+    "longitude": 2.2666,
+    "available": false,
+    "status": "walking"
+  },
+  {
+    "id": 283,
+    "latitude": 48.793,
+    "longitude": 2.4052,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 284,
+    "latitude": 48.9138,
+    "longitude": 2.3084,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 285,
+    "latitude": 48.8866,
+    "longitude": 2.2823,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 286,
+    "latitude": 48.8112,
+    "longitude": 2.1371,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 287,
+    "latitude": 48.9019,
+    "longitude": 2.3987,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 288,
+    "latitude": 48.8374,
+    "longitude": 2.3218,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 289,
+    "latitude": 48.8502,
+    "longitude": 2.138,
+    "available": false,
+    "status": "walking"
+  },
+  {
+    "id": 290,
+    "latitude": 48.9074,
+    "longitude": 2.2361,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 291,
+    "latitude": 48.8872,
+    "longitude": 2.2928,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 292,
+    "latitude": 48.9459,
+    "longitude": 2.445,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 293,
+    "latitude": 48.832,
+    "longitude": 2.316,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 294,
+    "latitude": 48.9422,
+    "longitude": 2.4302,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 295,
+    "latitude": 48.9004,
+    "longitude": 2.3172,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 296,
+    "latitude": 48.8057,
+    "longitude": 2.2302,
+    "available": false,
+    "status": "walking"
+  },
+  {
+    "id": 297,
+    "latitude": 48.812,
+    "longitude": 2.2247,
+    "available": false,
+    "status": "walking"
+  },
+  {
+    "id": 298,
+    "latitude": 48.8541,
+    "longitude": 2.1807,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 299,
+    "latitude": 48.8533,
+    "longitude": 2.3856,
+    "available": false,
+    "status": "walking"
+  },
+  {
+    "id": 300,
+    "latitude": 48.9485,
+    "longitude": 2.3615,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 301,
+    "latitude": 48.9004,
+    "longitude": 2.4376,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 302,
+    "latitude": 48.9035,
+    "longitude": 2.2805,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 303,
+    "latitude": 48.8674,
+    "longitude": 2.2894,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 304,
+    "latitude": 48.8784,
+    "longitude": 2.2432,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 305,
+    "latitude": 48.9347,
+    "longitude": 2.242,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 306,
+    "latitude": 48.8528,
+    "longitude": 2.1314,
+    "available": false,
+    "status": "walking"
+  },
+  {
+    "id": 307,
+    "latitude": 48.8971,
+    "longitude": 2.1955,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 308,
+    "latitude": 48.942,
+    "longitude": 2.2849,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 309,
+    "latitude": 48.9,
+    "longitude": 2.2818,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 310,
+    "latitude": 48.9152,
+    "longitude": 2.2456,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 311,
+    "latitude": 48.8959,
+    "longitude": 2.2528,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 312,
+    "latitude": 48.831,
+    "longitude": 2.1985,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 313,
+    "latitude": 48.9149,
+    "longitude": 2.1637,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 314,
+    "latitude": 48.9382,
+    "longitude": 2.1524,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 315,
+    "latitude": 48.8842,
+    "longitude": 2.2192,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 316,
+    "latitude": 48.8703,
+    "longitude": 2.33,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 317,
+    "latitude": 48.8402,
+    "longitude": 2.4243,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 318,
+    "latitude": 48.9194,
+    "longitude": 2.4091,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 319,
+    "latitude": 48.7934,
+    "longitude": 2.2047,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 320,
+    "latitude": 48.8155,
+    "longitude": 2.3548,
+    "available": false,
+    "status": "walking"
+  },
+  {
+    "id": 321,
+    "latitude": 48.8927,
+    "longitude": 2.3279,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 322,
+    "latitude": 48.8913,
+    "longitude": 2.402,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 323,
+    "latitude": 48.7934,
+    "longitude": 2.2099,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 324,
+    "latitude": 48.8294,
+    "longitude": 2.2763,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 325,
+    "latitude": 48.8449,
+    "longitude": 2.132,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 326,
+    "latitude": 48.9039,
+    "longitude": 2.2495,
+    "available": false,
+    "status": "walking"
+  },
+  {
+    "id": 327,
+    "latitude": 48.8802,
+    "longitude": 2.2917,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 328,
+    "latitude": 48.9012,
+    "longitude": 2.3881,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 329,
+    "latitude": 48.9427,
+    "longitude": 2.2692,
+    "available": false,
+    "status": "walking"
+  },
+  {
+    "id": 330,
+    "latitude": 48.9003,
+    "longitude": 2.1224,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 331,
+    "latitude": 48.9344,
+    "longitude": 2.2922,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 332,
+    "latitude": 48.8043,
+    "longitude": 2.3595,
+    "available": false,
+    "status": "walking"
+  },
+  {
+    "id": 333,
+    "latitude": 48.9371,
+    "longitude": 2.1332,
+    "available": false,
+    "status": "walking"
+  },
+  {
+    "id": 334,
+    "latitude": 48.916,
+    "longitude": 2.2386,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 335,
+    "latitude": 48.7964,
+    "longitude": 2.3251,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 336,
+    "latitude": 48.8281,
+    "longitude": 2.1973,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 337,
+    "latitude": 48.8148,
+    "longitude": 2.207,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 338,
+    "latitude": 48.8959,
+    "longitude": 2.1319,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 339,
+    "latitude": 48.8588,
+    "longitude": 2.4298,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 340,
+    "latitude": 48.8913,
+    "longitude": 2.2928,
+    "available": false,
+    "status": "walking"
+  },
+  {
+    "id": 341,
+    "latitude": 48.8514,
+    "longitude": 2.4329,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 342,
+    "latitude": 48.8237,
+    "longitude": 2.3944,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 343,
+    "latitude": 48.8814,
+    "longitude": 2.2642,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 344,
+    "latitude": 48.8041,
+    "longitude": 2.1952,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 345,
+    "latitude": 48.867,
+    "longitude": 2.3771,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 346,
+    "latitude": 48.8272,
+    "longitude": 2.3693,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 347,
+    "latitude": 48.8869,
+    "longitude": 2.4085,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 348,
+    "latitude": 48.8228,
+    "longitude": 2.1456,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 349,
+    "latitude": 48.9063,
+    "longitude": 2.3645,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 350,
+    "latitude": 48.8349,
+    "longitude": 2.3488,
+    "available": true,
+    "status": "walking"
+  },
+  {
+    "id": 351,
+    "latitude": 48.8077,
+    "longitude": 2.3714,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 352,
+    "latitude": 48.9364,
+    "longitude": 2.4412,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 353,
+    "latitude": 48.9371,
+    "longitude": 2.3517,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 354,
+    "latitude": 48.9244,
+    "longitude": 2.4112,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 355,
+    "latitude": 48.9488,
+    "longitude": 2.2718,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 356,
+    "latitude": 48.8872,
+    "longitude": 2.271,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 357,
+    "latitude": 48.9382,
+    "longitude": 2.2906,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 358,
+    "latitude": 48.9017,
+    "longitude": 2.4555,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 359,
+    "latitude": 48.852,
+    "longitude": 2.1616,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 360,
+    "latitude": 48.9174,
+    "longitude": 2.3508,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 361,
+    "latitude": 48.94,
+    "longitude": 2.3646,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 362,
+    "latitude": 48.8808,
+    "longitude": 2.1802,
+    "available": false,
+    "status": "cycling"
+  },
+  {
+    "id": 363,
+    "latitude": 48.8384,
+    "longitude": 2.1996,
+    "available": false,
+    "status": "cycling"
+  },
+  {
+    "id": 364,
+    "latitude": 48.8937,
+    "longitude": 2.3631,
+    "available": false,
+    "status": "cycling"
+  },
+  {
+    "id": 365,
+    "latitude": 48.9283,
+    "longitude": 2.2154,
+    "available": false,
+    "status": "cycling"
+  },
+  {
+    "id": 366,
+    "latitude": 48.7958,
+    "longitude": 2.1985,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 367,
+    "latitude": 48.8837,
+    "longitude": 2.2913,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 368,
+    "latitude": 48.8188,
+    "longitude": 2.3409,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 369,
+    "latitude": 48.797,
+    "longitude": 2.2142,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 370,
+    "latitude": 48.8099,
+    "longitude": 2.1733,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 371,
+    "latitude": 48.9457,
+    "longitude": 2.4133,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 372,
+    "latitude": 48.9036,
+    "longitude": 2.304,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 373,
+    "latitude": 48.8025,
+    "longitude": 2.3661,
+    "available": false,
+    "status": "cycling"
+  },
+  {
+    "id": 374,
+    "latitude": 48.9249,
+    "longitude": 2.3674,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 375,
+    "latitude": 48.8248,
+    "longitude": 2.3693,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 376,
+    "latitude": 48.9361,
+    "longitude": 2.1741,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 377,
+    "latitude": 48.8071,
+    "longitude": 2.1377,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 378,
+    "latitude": 48.8171,
+    "longitude": 2.4568,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 379,
+    "latitude": 48.8506,
+    "longitude": 2.2314,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 380,
+    "latitude": 48.8588,
+    "longitude": 2.3748,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 381,
+    "latitude": 48.8784,
+    "longitude": 2.2518,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 382,
+    "latitude": 48.7934,
+    "longitude": 2.3182,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 383,
+    "latitude": 48.8063,
+    "longitude": 2.4526,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 384,
+    "latitude": 48.9366,
+    "longitude": 2.3435,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 385,
+    "latitude": 48.8651,
+    "longitude": 2.3715,
+    "available": false,
+    "status": "cycling"
+  },
+  {
+    "id": 386,
+    "latitude": 48.8255,
+    "longitude": 2.1681,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 387,
+    "latitude": 48.7989,
+    "longitude": 2.1431,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 388,
+    "latitude": 48.9154,
+    "longitude": 2.2657,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 389,
+    "latitude": 48.8631,
+    "longitude": 2.2614,
+    "available": false,
+    "status": "cycling"
+  },
+  {
+    "id": 390,
+    "latitude": 48.9017,
+    "longitude": 2.4179,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 391,
+    "latitude": 48.8609,
+    "longitude": 2.2708,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 392,
+    "latitude": 48.8433,
+    "longitude": 2.3066,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 393,
+    "latitude": 48.8915,
+    "longitude": 2.2635,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 394,
+    "latitude": 48.8001,
+    "longitude": 2.2111,
+    "available": false,
+    "status": "cycling"
+  },
+  {
+    "id": 395,
+    "latitude": 48.9301,
+    "longitude": 2.3753,
+    "available": false,
+    "status": "cycling"
+  },
+  {
+    "id": 396,
+    "latitude": 48.8935,
+    "longitude": 2.1459,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 397,
+    "latitude": 48.8386,
+    "longitude": 2.2086,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 398,
+    "latitude": 48.8568,
+    "longitude": 2.1843,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 399,
+    "latitude": 48.834,
+    "longitude": 2.2729,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 400,
+    "latitude": 48.9341,
+    "longitude": 2.2756,
+    "available": false,
+    "status": "cycling"
+  },
+  {
+    "id": 401,
+    "latitude": 48.8012,
+    "longitude": 2.298,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 402,
+    "latitude": 48.922,
+    "longitude": 2.3847,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 403,
+    "latitude": 48.7996,
+    "longitude": 2.3226,
+    "available": false,
+    "status": "cycling"
+  },
+  {
+    "id": 404,
+    "latitude": 48.7929,
+    "longitude": 2.1664,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 405,
+    "latitude": 48.8849,
+    "longitude": 2.3081,
+    "available": false,
+    "status": "cycling"
+  },
+  {
+    "id": 406,
+    "latitude": 48.8254,
+    "longitude": 2.1923,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 407,
+    "latitude": 48.8596,
+    "longitude": 2.4099,
+    "available": false,
+    "status": "cycling"
+  },
+  {
+    "id": 408,
+    "latitude": 48.8507,
+    "longitude": 2.411,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 409,
+    "latitude": 48.7935,
+    "longitude": 2.2008,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 410,
+    "latitude": 48.9363,
+    "longitude": 2.302,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 411,
+    "latitude": 48.9431,
+    "longitude": 2.1598,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 412,
+    "latitude": 48.8579,
+    "longitude": 2.2017,
+    "available": false,
+    "status": "cycling"
+  },
+  {
+    "id": 413,
+    "latitude": 48.8394,
+    "longitude": 2.3584,
+    "available": false,
+    "status": "cycling"
+  },
+  {
+    "id": 414,
+    "latitude": 48.895,
+    "longitude": 2.3084,
+    "available": false,
+    "status": "cycling"
+  },
+  {
+    "id": 415,
+    "latitude": 48.8083,
+    "longitude": 2.3914,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 416,
+    "latitude": 48.8533,
+    "longitude": 2.2662,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 417,
+    "latitude": 48.9137,
+    "longitude": 2.3794,
+    "available": false,
+    "status": "cycling"
+  },
+  {
+    "id": 418,
+    "latitude": 48.8093,
+    "longitude": 2.1441,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 419,
+    "latitude": 48.8725,
+    "longitude": 2.1782,
+    "available": false,
+    "status": "cycling"
+  },
+  {
+    "id": 420,
+    "latitude": 48.8917,
+    "longitude": 2.4156,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 421,
+    "latitude": 48.9054,
+    "longitude": 2.3151,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 422,
+    "latitude": 48.9483,
+    "longitude": 2.2858,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 423,
+    "latitude": 48.9283,
+    "longitude": 2.4084,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 424,
+    "latitude": 48.8918,
+    "longitude": 2.3939,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 425,
+    "latitude": 48.8009,
+    "longitude": 2.3419,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 426,
+    "latitude": 48.9474,
+    "longitude": 2.1509,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 427,
+    "latitude": 48.9386,
+    "longitude": 2.1204,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 428,
+    "latitude": 48.8741,
+    "longitude": 2.1336,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 429,
+    "latitude": 48.8487,
+    "longitude": 2.4076,
+    "available": false,
+    "status": "cycling"
+  },
+  {
+    "id": 430,
+    "latitude": 48.7996,
+    "longitude": 2.4188,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 431,
+    "latitude": 48.8839,
+    "longitude": 2.3274,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 432,
+    "latitude": 48.8087,
+    "longitude": 2.1777,
+    "available": false,
+    "status": "cycling"
+  },
+  {
+    "id": 433,
+    "latitude": 48.9132,
+    "longitude": 2.1465,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 434,
+    "latitude": 48.9321,
+    "longitude": 2.4303,
+    "available": false,
+    "status": "cycling"
+  },
+  {
+    "id": 435,
+    "latitude": 48.84,
+    "longitude": 2.1324,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 436,
+    "latitude": 48.8617,
+    "longitude": 2.3646,
+    "available": false,
+    "status": "cycling"
+  },
+  {
+    "id": 437,
+    "latitude": 48.8146,
+    "longitude": 2.3088,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 438,
+    "latitude": 48.7937,
+    "longitude": 2.2933,
+    "available": false,
+    "status": "cycling"
+  },
+  {
+    "id": 439,
+    "latitude": 48.9283,
+    "longitude": 2.155,
+    "available": false,
+    "status": "cycling"
+  },
+  {
+    "id": 440,
+    "latitude": 48.8049,
+    "longitude": 2.1369,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 441,
+    "latitude": 48.809,
+    "longitude": 2.2022,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 442,
+    "latitude": 48.8757,
+    "longitude": 2.1437,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 443,
+    "latitude": 48.8842,
+    "longitude": 2.2836,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 444,
+    "latitude": 48.8733,
+    "longitude": 2.2644,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 445,
+    "latitude": 48.9129,
+    "longitude": 2.4036,
+    "available": false,
+    "status": "cycling"
+  },
+  {
+    "id": 446,
+    "latitude": 48.9228,
+    "longitude": 2.1867,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 447,
+    "latitude": 48.8199,
+    "longitude": 2.4444,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 448,
+    "latitude": 48.8413,
+    "longitude": 2.4138,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 449,
+    "latitude": 48.9468,
+    "longitude": 2.3481,
+    "available": true,
+    "status": "cycling"
+  },
+  {
+    "id": 450,
+    "latitude": 48.8372,
+    "longitude": 2.4395,
+    "available": true,
+    "status": "cycling"
   }
 ]
