@@ -4,6 +4,7 @@ import os
 import requests
 import math
 import json
+import time
 from typing import Tuple, List, Optional
 
 
@@ -87,26 +88,44 @@ class TaskSelectUsers:
         """
         Select users by combined filters and sorting.
         """
+        # Start timing the total computation
+        total_start_time = time.time()
+        
         users = self.get_all_users()
         candidates: List[Tuple[dict, float, float, dict]] = []
         osrm_results_map = {}
         osrm_response_values = []
+        user_computation_times = {}  # Store computation time for each user
 
         for idx, user in enumerate(users):
+            # Start timing for this user
+            user_start_time = time.time()
             lat = user.get('latitude')
             lon = user.get('longitude')
             if lat is None or lon is None:
                 continue
             loc = (lat, lon)
+            
+            # Filter by user status (driving, walking, cycling)
+            user_status = user.get('status')
+            if user_status != self.user_profile_selection:
+                continue
+                
             # Pre-filter by straight-line distance
             if self.euclidian_filter_km is not None:
                 if self.haversine_distance(alert_location, loc) > self.euclidian_filter_km:
                     continue
             # Calculate route metrics
             distance_km, duration_s, full_response = self.calculate_distance(alert_location, loc)
+            
+            # End timing for this user
+            user_end_time = time.time()
+            user_computation_time = user_end_time - user_start_time
+            
             # Store OSRM result for this user (by index or user id if available)
             user_key = user.get('id', idx)
             osrm_results_map[user_key] = {'distance_km': distance_km, 'duration_s': duration_s}
+            user_computation_times[user_key] = user_computation_time
             
             # Store full OSRM response for OSRM_RESPONSE_VALUES
             if full_response:
@@ -135,12 +154,18 @@ class TaskSelectUsers:
             if len(selected) >= num_users:
                 break
 
+        # End timing the total computation
+        total_end_time = time.time()
+        total_computation_time = total_end_time - total_start_time
+        
         # Log the selection results
+        print(f"Profile filter: {self.user_profile_selection}")
         print(f"Selected {len(selected)} users out of {len(users)} total users")
+        print(f"Total computation time: {total_computation_time:.4f} seconds")
         if not selected:
             print("Warning: No users selected based on current criteria")
 
-        return selected, osrm_results_map, osrm_response_values
+        return selected, osrm_results_map, osrm_response_values, total_computation_time, user_computation_times
 
 if __name__ == '__main__':
     OSRM_URL ='https://airbusrt.ddns.net'
@@ -163,12 +188,17 @@ if __name__ == '__main__':
     )
 
     alert_location = (48.79842194845064, 1.9707823090763419)
-    selected_users, osrm_results_map, osrm_response_values = selector.select_nearest_available_users(
+    selected_users, osrm_results_map, osrm_response_values, total_computation_time, user_computation_times = selector.select_nearest_available_users(
         alert_location,
         num_users=NUM_USERS_SELECTION
     )
 
     print(f"Selected {len(selected_users)} users: {selected_users}")
+    print(f"Total computation time: {total_computation_time:.4f} seconds")
+    print(f"Per-user computation times: {user_computation_times}")
+    
     resultMap.put("SELECTED_USERS", json.dumps(selected_users))
     resultMap.put("OSRM_RESULTS", json.dumps(osrm_results_map))
     resultMap.put("OSRM_RESPONSE_VALUES", json.dumps(osrm_response_values))
+    resultMap.put("TOTAL_COMPUTATION_TIME", total_computation_time)
+    resultMap.put("USER_COMPUTATION_TIMES", json.dumps(user_computation_times))

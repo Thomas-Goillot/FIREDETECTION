@@ -54,4 +54,16 @@ task SelectUsers {
         type string;
     }
 
+    define metric TOTAL_COMPUTATION_TIME {
+        //semanticType Performance;
+        kind single-value;
+        type double;
+    }
+
+    define metric USER_COMPUTATION_TIMES {
+        //semanticType Performance;
+        kind single-value;
+        type string;
+    }
+
 }

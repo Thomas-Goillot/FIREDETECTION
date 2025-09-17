@@ -43,7 +43,7 @@ experiment Exp1 {
     space S1 of FireDetectionWorkflow1 {
         //strategy gridsearch;
         strategy randomsearch;
-        runs = 3;
+        runs = 1;
 
         // SelectUsers
         param_values num_users_selection_values = range(3,10);
