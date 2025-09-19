@@ -66,4 +66,16 @@ task SelectUsers {
         type string;
     }
 
+    define metric USER_RESPONSE_ACCEPTED {
+        //semanticType User_Response;
+        kind single-value;
+        type string;
+    }
+
+    define metric FILTERING_METRICS {
+        //semanticType Filtering_Analysis;
+        kind single-value;
+        type string;
+    }
+
 }

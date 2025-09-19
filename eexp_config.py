@@ -11,7 +11,7 @@ PROACTIVE_URL = "https://proactive.extremexp-icom.intracom-telecom.com"
 PROACTIVE_USERNAME = "ads_user"
 PROACTIVE_PASSWORD = "}h18?7DhM"
 
-MAX_WORKFLOWS_IN_PARALLEL_PER_NODE = 1
+MAX_WORKFLOWS_IN_PARALLEL_PER_NODE = 4
 
 DATA_ABSTRACTION_BASE_URL = "https://api.dal.extremexp-icom.intracom-telecom.com/api"
 DATA_ABSTRACTION_ACCESS_TOKEN = '72fcd93c8e91c9a4704f80754369c1dba25e2ecb'

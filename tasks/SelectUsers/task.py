@@ -92,10 +92,19 @@ class TaskSelectUsers:
         total_start_time = time.time()
         
         users = self.get_all_users()
+        print(f"Total users loaded: {len(users)}")
+        
         candidates: List[Tuple[dict, float, float, dict]] = []
         osrm_results_map = {}
         osrm_response_values = []
         user_computation_times = {}  # Store computation time for each user
+        
+        # Counters for metrics
+        status_filtered = 0
+        haversine_filtered = 0
+        diameter_filtered = 0
+        osrm_errors = 0
+        invalid_coordinates = 0
 
         for idx, user in enumerate(users):
             # Start timing for this user
@@ -103,20 +112,28 @@ class TaskSelectUsers:
             lat = user.get('latitude')
             lon = user.get('longitude')
             if lat is None or lon is None:
+                invalid_coordinates += 1
                 continue
             loc = (lat, lon)
             
             # Filter by user status (driving, walking, cycling)
             user_status = user.get('status')
             if user_status != self.user_profile_selection:
+                status_filtered += 1
                 continue
-                
+            
             # Pre-filter by straight-line distance
             if self.euclidian_filter_km is not None:
-                if self.haversine_distance(alert_location, loc) > self.euclidian_filter_km:
+                haversine_dist = self.haversine_distance(alert_location, loc)
+                if haversine_dist > self.euclidian_filter_km:
+                    haversine_filtered += 1
                     continue
             # Calculate route metrics
             distance_km, duration_s, full_response = self.calculate_distance(alert_location, loc)
+            
+            # Check for OSRM errors
+            if distance_km == float('inf') or duration_s == float('inf'):
+                osrm_errors += 1
             
             # End timing for this user
             user_end_time = time.time()
@@ -137,6 +154,7 @@ class TaskSelectUsers:
             # Filter by diameter
             if self.selection_diameter_km is not None:
                 if distance_km > (self.selection_diameter_km / 2):
+                    diameter_filtered += 1
                     continue
             candidates.append((user, distance_km, duration_s, full_response))
 
@@ -165,7 +183,19 @@ class TaskSelectUsers:
         if not selected:
             print("Warning: No users selected based on current criteria")
 
-        return selected, osrm_results_map, osrm_response_values, total_computation_time, user_computation_times
+        # Create filtering metrics
+        filtering_metrics = {
+            'total_users': len(users),
+            'invalid_coordinates': invalid_coordinates,
+            'status_filtered': status_filtered,
+            'haversine_filtered': haversine_filtered,
+            'osrm_errors': osrm_errors,
+            'diameter_filtered': diameter_filtered,
+            'candidates': len(candidates),
+            'selected': len(selected)
+        }
+        
+        return selected, osrm_results_map, osrm_response_values, total_computation_time, user_computation_times, filtering_metrics
 
 if __name__ == '__main__':
     OSRM_URL ='https://airbusrt.ddns.net'
@@ -188,7 +218,7 @@ if __name__ == '__main__':
     )
 
     alert_location = (48.79842194845064, 1.9707823090763419)
-    selected_users, osrm_results_map, osrm_response_values, total_computation_time, user_computation_times = selector.select_nearest_available_users(
+    selected_users, osrm_results_map, osrm_response_values, total_computation_time, user_computation_times, filtering_metrics = selector.select_nearest_available_users(
         alert_location,
         num_users=NUM_USERS_SELECTION
     )
@@ -202,3 +232,4 @@ if __name__ == '__main__':
     resultMap.put("OSRM_RESPONSE_VALUES", json.dumps(osrm_response_values))
     resultMap.put("TOTAL_COMPUTATION_TIME", total_computation_time)
     resultMap.put("USER_COMPUTATION_TIMES", json.dumps(user_computation_times))
+    resultMap.put("FILTERING_METRICS", json.dumps(filtering_metrics))

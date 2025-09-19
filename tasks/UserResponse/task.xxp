@@ -1,6 +1,8 @@
 task UserResponse {
     implementation "UserResponse/task.py";
 
+    define input data SELECTED_USERS;
+
     define param accept_string {
         type String;
         default "accept";
@@ -26,8 +28,8 @@ task UserResponse {
     }
 
     define metric USER_RESPONSE_ACCEPTED {    
-        //semanticType ML_Accuracy;    
+        //semanticType User_Response;    
         kind single-value;    
-        type boolean;
+        type string;
     }
 }
