@@ -10,5 +10,46 @@ task DetectAlert {
         kind single-value;
         type string;
     }
+    
+    define metric FIRE_DETECTED {
+        kind single-value;
+        type string;
+    }
+    define metric DETECTION_CONFIDENCE {
+        kind single-value;
+        type string;
+    }
+    define metric DETECTION_LATITUDE {
+        kind single-value;
+        type string;
+    }
+    define metric DETECTION_LONGITUDE {
+        kind single-value;
+        type string;
+    }
+    define metric DETECTED_OBJECTS {
+        kind single-value;
+        type string;
+    }
+    define metric PROCESSED_FILE {
+        kind single-value;
+        type string;
+    }
+    define metric POI_UUID {
+        kind single-value;
+        type string;
+    }
+    define metric POI_CREATED {
+        kind single-value;
+        type string;
+    }
+    define metric MESSAGE_UUID {
+        kind single-value;
+        type string;
+    }
+    define metric MESSAGE_SENT {
+        kind single-value;
+        type string;
+    }
 
 }

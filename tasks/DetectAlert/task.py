@@ -4,6 +4,10 @@ import os
 import cv2
 import numpy as np
 import torch
+import json
+import requests
+import uuid
+from datetime import datetime
 from typing import Tuple, List
 
 
@@ -153,11 +157,25 @@ def process_local_files(model, directory: str, user_id: str = "user123"):
             if img is None:
                 raise ValueError("Failed to read image.")
             start_time = time.time()
-            fire_detected, objects = detect_fire(model, img, visualize=False)
+            fire_detected, objects = detect_fire(model, img, visualize=True)
             end_time = time.time()
             inference_time = end_time - start_time
+            
+            # Calculer la confiance maximale pour les détections de feu
+            max_fire_confidence = 0.0
+            for obj_name, confidence in objects:
+                if obj_name == 'fire' and confidence > max_fire_confidence:
+                    max_fire_confidence = confidence
+            
             print(f"User: {user_id} | Image: {selected_file} | Fire detected: {fire_detected} | Objects: {objects}")
             print(f"Inference time: {inference_time:.4f} seconds")
+            
+            # Stocker les résultats de détection
+            resultMap.put("FIRE_DETECTED", str(fire_detected).lower())
+            resultMap.put("DETECTION_CONFIDENCE", str(max_fire_confidence))
+            resultMap.put("DETECTED_OBJECTS", json.dumps(objects))
+            resultMap.put("PROCESSED_FILE", selected_file)
+            
             return inference_time
         except Exception as e:
             print(f"Error processing image: {e}")
@@ -165,7 +183,21 @@ def process_local_files(model, directory: str, user_id: str = "user123"):
     elif is_video_file(selected_file):
         try:
             fire_detected, objects = process_video(model, selected_path, frame_sampling=10)
+            
+            # Calculer la confiance maximale pour les détections de feu
+            max_fire_confidence = 0.0
+            for obj_name, confidence in objects:
+                if obj_name == 'fire' and confidence > max_fire_confidence:
+                    max_fire_confidence = confidence
+            
             print(f"User: {user_id} | Video: {selected_file} | Fire detected: {fire_detected} | Objects: {objects}")
+            
+            # Stocker les résultats de détection
+            resultMap.put("FIRE_DETECTED", str(fire_detected).lower())
+            resultMap.put("DETECTION_CONFIDENCE", str(max_fire_confidence))
+            resultMap.put("DETECTED_OBJECTS", json.dumps(objects))
+            resultMap.put("PROCESSED_FILE", selected_file)
+            
         except Exception as e:
             print(f"Error processing video: {e}")
         return None
@@ -175,7 +207,95 @@ def process_local_files(model, directory: str, user_id: str = "user123"):
 
 
 # ------------------------------
-# Part 4: Combined Execution
+# Part 4: POI and Message Functions
+# ------------------------------
+
+def create_poi(uuid: str, latitude: float, longitude: float, description: str = "Fire Detection Alert", poi_type: str = "FIRE"):
+    """
+    Crée un POI (Point of Interest) aux coordonnées spécifiées.
+    """
+    try:
+        # URL de l'API pour créer un POI
+        api_url = "https://dsx.thomasgllt.fr/pois/create"
+        
+        # Données du POI selon le modèle Android
+        poi_data = {
+            "uuid": uuid,
+            "poiType": poi_type,  # Utilise l'enum PoiType.FIRE
+            "senderUuid": "fire_detection_system",  # Identifiant du système de détection
+            "latitude": latitude,
+            "longitude": longitude,
+            "fileName": None,  # Pas de fichier pour une détection de feu
+            "text": description,
+            "created_at": datetime.now().isoformat()
+        }
+        
+        # Envoi de la requête
+        response = requests.post(api_url, json=poi_data)
+        
+        if response.status_code == 200 or response.status_code == 201:
+            result = response.json()
+            poi_uuid = result.get("uuid") or result.get("id")
+            print(f"POI created successfully: {poi_uuid}")
+            return poi_uuid
+        else:
+            print(f"Error creating POI: {response.status_code} - {response.text}")
+            return None
+            
+    except Exception as e:
+        print(f"Error creating POI: {e}")
+        return None
+
+
+def send_fire_detection_message(uuid: str = None, poi_uuid: str = None, latitude: float = None, longitude: float = None, 
+                               confidence: float = None, image_path: str = None):
+    """
+    Envoie un message de détection de feu.
+    """
+    try:
+        # URL de l'API pour envoyer un message
+        api_url = "https://dsx.thomasgllt.fr/messages/create"
+        
+        # Contenu du message
+        message_content = f"🚨 ALERTE FEU DÉTECTÉE 🚨\n\n"
+        message_content += f"📍 Coordonnées: {latitude:.6f}, {longitude:.6f}\n"
+        message_content += f"🎯 Confiance: {confidence:.2%}\n"
+        message_content += f"🔗 POI UUID: {poi_uuid}\n"
+        message_content += f"⏰ Détecté le: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n"
+        message_content += f"\n⚠️ Action immédiate requise !"
+        
+        # Données du message selon le modèle fourni
+        message_data = {
+            "uuid": uuid,
+            "senderUuid": "fire_detection_system",  # Identifiant du système de détection
+            "text": message_content,
+            "timestamp": int(datetime.now().timestamp() * 1000),  # Timestamp en millisecondes
+            "poiUuid": poi_uuid,  # Référence au POI créé
+            "latitude": latitude,
+            "longitude": longitude,
+            "confidence": confidence,
+            "messageType": "fire_alert"
+        }
+        
+        # Envoi de la requête
+        response = requests.post(api_url, json=message_data)
+        
+        if response.status_code == 200 or response.status_code == 201:
+            result = response.json()
+            message_uuid = result.get("uuid") or result.get("id")
+            print(f"Message sent successfully: {message_uuid}")
+            return message_uuid
+        else:
+            print(f"Error sending message: {response.status_code} - {response.text}")
+            return None
+            
+    except Exception as e:
+        print(f"Error sending message: {e}")
+        return None
+
+
+# ------------------------------
+# Part 5: Combined Execution
 # ------------------------------
 
 if __name__ == '__main__':
@@ -196,3 +316,46 @@ if __name__ == '__main__':
 
     if inference_time is not None:
         resultMap.put("INFERENCE_TIME", f"{inference_time:.4f} seconds")
+        
+    # Simulation d'une détection de feu avec coordonnées par défaut
+    fire_detected = True  # Pour la simulation, considérer qu'un feu est détecté
+    latitude = 48.8566    # Paris latitude
+    longitude = 2.3522    # Paris longitude
+    confidence = 0.85     # Confiance simulée
+    
+    # Stockage des métriques
+    resultMap.put("DETECTION_LATITUDE", str(latitude))
+    resultMap.put("DETECTION_LONGITUDE", str(longitude))
+    resultMap.put("DETECTION_CONFIDENCE", str(confidence))
+    resultMap.put("FIRE_DETECTED", "true")
+    
+    # Si un feu est détecté, créer un POI et envoyer un message
+    if fire_detected:
+        print("🔥 Fire detected! Creating POI and sending alert message...")
+        
+        generated_poi_uuid = uuid.uuid4()
+        generated_message_uuid = uuid.uuid4()
+        # Création du POI
+        create_poi(
+            uuid=str(generated_poi_uuid),
+            latitude=latitude,
+            longitude=longitude,
+            description="Fire Detection Alert - Immediate attention required",
+            poi_type="FIRE"
+        )
+        
+        # Envoi du message d'alerte
+        send_fire_detection_message(
+            uuid=str(generated_message_uuid),
+            poi_uuid=str(generated_poi_uuid),
+            latitude=latitude,
+            longitude=longitude,
+            confidence=confidence,
+            image_path="detection_result.jpg"
+        )
+        
+        # Stockage des résultats
+    else:
+        print("No fire detected, skipping POI creation and message sending")
+        resultMap.put("POI_CREATED", "false")
+        resultMap.put("MESSAGE_SENT", "false")
