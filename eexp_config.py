@@ -23,7 +23,6 @@ DDM_URL = "https://ddm.extremexp-icom.intracom-telecom.com"
 PORTAL_USERNAME = "drouglazet"
 PORTAL_PASSWORD = "Alphazero1?"
 
-# logging configuration, optional; if not set, all loggers have INFO level
 LOGGING_CONFIG = {
     'version': 1,
     'loggers': {

@@ -78,4 +78,40 @@ task SelectUsers {
         type string;
     }
 
+    // Performance Computationnelle Avancée
+    define metric OSRM_CALLS_COUNT {
+        kind single-value;
+        type double;
+    }
+
+    define metric OSRM_SUCCESS_RATE {
+        kind single-value;
+        type double;
+    }
+
+    define metric AVERAGE_OSRM_RESPONSE_TIME {
+        kind single-value;
+        type double;
+    }
+
+    define metric EUCLIDIAN_FILTER_EFFICIENCY {
+        kind single-value;
+        type double;
+    }
+
+    define metric COMPUTATION_EFFICIENCY_SCORE {
+        kind single-value;
+        type double;
+    }
+
+    define metric OPTIMIZATION_GAIN {
+        kind single-value;
+        type double;
+    }
+
+    define metric PARAMETER_IMPACT_SCORE {
+        kind single-value;
+        type double;
+    }
+
 }

@@ -3,27 +3,26 @@ import proactive_helper as ph
 import json
 import random
 
-accept_string    = variables.get("accept_string")
-reject_string    = variables.get("reject_string")
-case_sensitive   = variables.get("case_sensitive") == "true"
-default_response = variables.get("default_response")
-
 class UserResponse:
     def __init__(self):
-        pass
+        # Hardcoded response configuration
+        self.accept_string = "accept"
+        self.reject_string = "reject"
+        self.case_sensitive = False
+        self.default_response = "accept"
 
     def check_user_response(self, user_response: str) -> bool:
-        resp = user_response if case_sensitive else user_response.lower()
-        accept = accept_string if case_sensitive else accept_string.lower()
-        reject = reject_string if case_sensitive else reject_string.lower()
+        resp = user_response if self.case_sensitive else user_response.lower()
+        accept = self.accept_string if self.case_sensitive else self.accept_string.lower()
+        reject = self.reject_string if self.case_sensitive else self.reject_string.lower()
 
         if resp == accept:
             return True
         if resp == reject:
             return False
-        if default_response == "accept":
+        if self.default_response == "accept":
             return True
-        if default_response == "reject":
+        if self.default_response == "reject":
             return False
         return False
 
@@ -31,13 +30,14 @@ class UserResponse:
         """
         Process selected users and simulate their responses.
         Returns users who accepted the alert.
+        Hardcoded: 80% acceptance rate for simulation.
         """
         try:
             selected_users = json.loads(selected_users_json)
             accepted_users = []
             
             for user in selected_users:
-                # Simulate user response (80% acceptance rate)
+                # Simulate user response (80% acceptance rate - hardcoded)
                 accepted = random.random() < 0.8
                 
                 if accepted:

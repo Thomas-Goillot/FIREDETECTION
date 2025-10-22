@@ -227,9 +227,72 @@ if __name__ == '__main__':
     print(f"Total computation time: {total_computation_time:.4f} seconds")
     print(f"Per-user computation times: {user_computation_times}")
     
+    # =====================================================================
+    # CALCUL DES MÉTRIQUES DE PERFORMANCE COMPUTATIONNELLE
+    # =====================================================================
+    
+    # Comptage des appels OSRM
+    osrm_calls_count = len(osrm_results_map)
+    
+    # Taux de succès OSRM
+    successful_osrm_calls = sum(1 for result in osrm_results_map.values() 
+                               if result['distance_km'] != float('inf'))
+    osrm_success_rate = successful_osrm_calls / max(osrm_calls_count, 1)
+    
+    # Temps de réponse OSRM moyen
+    osrm_response_times = [time for time in user_computation_times.values()]
+    avg_osrm_response_time = sum(osrm_response_times) / max(len(osrm_response_times), 1)
+    
+    # Efficacité du filtre euclidien
+    total_users = filtering_metrics.get('total_users', 0)
+    haversine_filtered = filtering_metrics.get('haversine_filtered', 0)
+    euclidian_filter_efficiency = haversine_filtered / max(total_users, 1)
+    
+    # Score d'efficacité computationnelle (plus élevé = meilleur)
+    # Combine: vitesse, succès OSRM, efficacité du filtre
+    computation_efficiency_score = (
+        (1.0 / max(total_computation_time, 0.001)) * 0.4 +  # Vitesse (inverse du temps)
+        osrm_success_rate * 0.3 +                            # Succès OSRM
+        euclidian_filter_efficiency * 0.3                     # Efficacité du filtre
+    )
+    
+    # Score d'impact des paramètres
+    # Mesure l'impact des paramètres sur la performance
+    param_impact_score = (
+        (OSRM_TIMEOUT_S / 30.0) * 0.25 +                     # Impact du timeout (normalisé)
+        (EUCLIDIAN_FILTER_KM / 100.0) * 0.25 +               # Impact du filtre euclidien
+        (SELECTION_DIAMETER_KM / 50.0) * 0.25 +              # Impact du diamètre
+        (NUM_USERS_SELECTION / 20.0) * 0.25                  # Impact du nombre d'utilisateurs
+    )
+    
+    # Gain d'optimisation (comparaison avec une baseline théorique)
+    baseline_time = 10.0  # Temps de référence théorique
+    optimization_gain = max(0, (baseline_time - total_computation_time) / baseline_time)
+    
+    print("\n" + "=" * 80)
+    print("PERFORMANCE COMPUTATIONNELLE")
+    print("=" * 80)
+    print(f"Appels OSRM: {osrm_calls_count}")
+    print(f"Taux de succès OSRM: {osrm_success_rate:.4f}")
+    print(f"Temps de réponse OSRM moyen: {avg_osrm_response_time:.4f}s")
+    print(f"Efficacité filtre euclidien: {euclidian_filter_efficiency:.4f}")
+    print(f"Score d'efficacité computationnelle: {computation_efficiency_score:.4f}")
+    print(f"Score d'impact des paramètres: {param_impact_score:.4f}")
+    print(f"Gain d'optimisation: {optimization_gain:.4f}")
+    
+    # Stockage des métriques de base
     resultMap.put("SELECTED_USERS", json.dumps(selected_users))
     resultMap.put("OSRM_RESULTS", json.dumps(osrm_results_map))
     resultMap.put("OSRM_RESPONSE_VALUES", json.dumps(osrm_response_values))
     resultMap.put("TOTAL_COMPUTATION_TIME", total_computation_time)
     resultMap.put("USER_COMPUTATION_TIMES", json.dumps(user_computation_times))
     resultMap.put("FILTERING_METRICS", json.dumps(filtering_metrics))
+    
+    # Stockage des nouvelles métriques de performance
+    resultMap.put("OSRM_CALLS_COUNT", str(osrm_calls_count))
+    resultMap.put("OSRM_SUCCESS_RATE", f"{osrm_success_rate:.4f}")
+    resultMap.put("AVERAGE_OSRM_RESPONSE_TIME", f"{avg_osrm_response_time:.4f}")
+    resultMap.put("EUCLIDIAN_FILTER_EFFICIENCY", f"{euclidian_filter_efficiency:.4f}")
+    resultMap.put("COMPUTATION_EFFICIENCY_SCORE", f"{computation_efficiency_score:.4f}")
+    resultMap.put("OPTIMIZATION_GAIN", f"{optimization_gain:.4f}")
+    resultMap.put("PARAMETER_IMPACT_SCORE", f"{param_impact_score:.4f}")
